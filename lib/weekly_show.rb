@@ -1,4 +1,13 @@
-module WeeklyShow
+require 'active_support/time'
+require 'action_view'
+
+class WeeklyShow
+  include ActionView::Helpers::DateHelper
+
+  def initialize(options={})
+    @options = options
+  end
+
   def show_last_three_weeks
     this_week = Date.today.beginning_of_week(:sunday)
     past_week = this_week - 1.week
