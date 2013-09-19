@@ -2,10 +2,14 @@ require 'active_support/time'
 require 'action_view'
 
 class WeeklyShow
-  include ActionView::Helpers::DateHelper
+  include ActionView::Context
+  include ActionView::Helpers::TagHelper
+
+  attr_reader :options
 
   def initialize(options={})
-    @options = options
+    default_options = {weeks_before: 3, weeks_ahead: 0}
+    @options = default_options.merge(options)
   end
 
   def show_last_three_weeks
