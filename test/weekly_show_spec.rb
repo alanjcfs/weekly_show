@@ -4,7 +4,7 @@ require 'weekly_show'
 
 class WeeklyShowSpec < Minitest::Spec
   before do
-    weekly_show = WeeklyShow.new
+    @weekly_show = WeeklyShow.new
   end
 
   it "is sane" do
@@ -17,5 +17,12 @@ class WeeklyShowSpec < Minitest::Spec
 
   it "can add time to date" do
     (Date.parse("2012-09-18") + 1.year).must_equal Date.parse("2013-09-18")
+  end
+
+  it "can generate a table for one week" do
+    @weekly_show.show_weeks.must_include "table"
+  end
+
+  it "can generate a table for any number of weeks" do
   end
 end
