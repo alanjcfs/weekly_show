@@ -1,4 +1,4 @@
-- Weekly Show
+== Weekly Show
 
 This gem will show the current week for your table.
 
