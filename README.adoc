@@ -1,11 +1,19 @@
-h1. Weekly Show
+= Weekly Show
 
 This gem will show the current week for your table.
 
 To install, simply add to your Gemfile
 
-@gem 'weekly_show'@
+[NOTE]
+ gem 'weekly_show'
 
-run @bundle install@.
+[NOTE]
+ @bundle install@.
 
-Now, you can call WeeklyShow.new
+Anywhere in Rails view (yes, it currently has a Rails dependency), call
+ ws = WeeklyShow.new
+ ws.show_last_three_weeks
+
+It will now show a table of the last three weeks, with the last 14 days,
+including today, marked with a classname "two-weeks" and anything outside of
+that period, "not-two-weeks".  For today, the classname will be "today".
