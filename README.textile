@@ -1,3 +1,11 @@
 h1. Weekly Show
 
 This gem will show the current week for your table.
+
+To install, simply add to your Gemfile
+
+@gem 'weekly_show'@
+
+run @bundle install@.
+
+Now, you can call WeeklyShow.new

@@ -83,6 +83,7 @@ class WeeklyShow
     content_tag(:span, "TODAY", class: "today") if day == Date.today
   end
 
-  def show_week
+  def show_weeks
+    "table"
   end
 end
