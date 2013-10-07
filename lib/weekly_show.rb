@@ -59,7 +59,7 @@ class WeeklyShow
     return week.strftime("%B") if week.day == 1
 
     week_range         = week..week.end_of_week(:sunday)
-    day_one_next_month = week.end_of_month + 1.second
+    day_one_next_month = week.end_of_month + 1.day
 
     this_month_name    = week.strftime("%B")
     next_month_name    = day_one_next_month.strftime("%B")
